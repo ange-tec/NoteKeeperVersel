@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/favicon.png"
+      type="image/png"
+    />
+    <title>NoteKeeper - Votre gestionnaire de notes</title>
+  </head>
+  <body>
+    <h1>NoteKeeper</h1>
+
+    <section>
+      <h2>Créer une nouvelle note</h2>
+
+      <form id="note-creator">
+        <textarea
+          id="note-creator-content"
+          placeholder="Contenu de la note"
+        ></textarea>
+        <button type="submit">Créer cette note</button>
+      </form>
+    </section>
+
+    <div class="wrapper">
+      <section>
+        <h2>Liste des notes existantes</h2>
+
+        <div id="notes-container" class="item-list"></div>
+      </section>
+
+      <section>
+        <h2>Opérations effectuées</h2>
+
+        <div id="logs-container" class="item-list"></div>
+      </section>
+    </div>
+
+    <script
+      src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
